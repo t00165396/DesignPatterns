@@ -40,15 +40,15 @@ public class snake {
         for (int i = snake.size() - 1; i >= 1; i--) {
             snake.get(i).setLocation(snake.get(i - 1));
         }
-        snake.getFirst().x += dx;
-        snake.getFirst().y += dy;
+        snakesHead.x += dx;
+        snakesHead.y += dy;
     }
 
 
     public void growSnake(int n) {
         while (n > 0) {
-            Point tail = snake.getLast();
-            snake.add(new Point(tail));
+
+            snake.add(new Point(snakesTail));
             n--;
         }
     }
