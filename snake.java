@@ -22,7 +22,7 @@ public class snake {
     }
 
     public Point getSnakesTail(){
-        return  snake.getLast();
+        return  snake.getLast();//
 
     }
 
