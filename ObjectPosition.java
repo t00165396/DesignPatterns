@@ -13,9 +13,9 @@ public class ObjectPosition {
         }
 
 
-        public ObjectPosition (int x, int y){
-            this.dx = x;
-            this.dy = y;
+        public ObjectPosition (int dx, int dy){
+            this.dx = dx;
+            this.dy = dy;
         }
 
 
