@@ -11,6 +11,7 @@ public class snake  extends MoveObject{
     private LinkedList<Point> snakeBody;
     private Point snakesHead;
     private Point snakesTail;
+    private int x;
 
     public snake(){
         super();
@@ -51,9 +52,9 @@ public class snake  extends MoveObject{
 
 
     @Override
-    public void move() {
+    public void move( ) {
 
-        int dx=0;
+        int dx=0; 
         int dy=0;
         for (int i = snakeBody.size() - 1; i >= 1; i--) {
            snakeBody.get(i).setLocation(snakeBody.get(i - 1));
