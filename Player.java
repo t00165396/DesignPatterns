@@ -34,7 +34,7 @@ public class Player {
 	
 		
 	/* Every object should have one of these, to give a quick
-	 * String summary of the values of all the object's attributes
+	 * String summary of the values of all the object'Strategy attributes
 	 */
 	public String toString() {
 				return getName() + " " + getScore();

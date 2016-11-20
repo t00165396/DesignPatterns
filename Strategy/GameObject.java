@@ -1,11 +1,11 @@
-/**
- * Created by lirandakrasniqi on 06/11/2016.
- */
+package Strategy;
+
+
 public abstract class  GameObject {
 
     private ObjectPosition objectPosition;
 
-//need to draw objects here
+    //need to draw objects here
     //position of object
 
 

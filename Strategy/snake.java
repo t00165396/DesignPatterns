@@ -1,14 +1,14 @@
+package Strategy;
+
 import java.awt.*;
 import java.util.LinkedList;
 
-
-
 /**
- * Created by lirandakrasniqi on 06/11/2016.
+ * Created by lirandakrasniqi on 20/11/2016.
  */
-public class snake  extends MoveObject{
+public class snake  extends MoveObject {
 
-    private LinkedList<Point> snakeBody;
+    private LinkedList<Point> snakeBody= new LinkedList<>();
     private Point snakesHead;
     private Point snakesTail;
     private int x;
@@ -54,13 +54,26 @@ public class snake  extends MoveObject{
     @Override
     public void move( ) {
 
-        int dx=0; 
+        int dx=0;
         int dy=0;
         for (int i = snakeBody.size() - 1; i >= 1; i--) {
-           snakeBody.get(i).setLocation(snakeBody.get(i - 1));
-       }
-      snakesHead.x += dx;
-      snakesHead.y += 1;
+            snakeBody.get(i).setLocation(snakeBody.get(i - 1));
+        }
+        snakesHead.x += dx;
+        snakesHead.y += 1;
+
+    }
+
+    public void moveSnake( int dx, int dy) {
+
+
+        for (int i = snakeBody.size() - 1; i >= 1; i--) {
+            snakeBody.get(i).setLocation(snakeBody.get(i - 1));
+        }
+        snakesHead.x += dx;
+        snakesHead.y += dy;
+
+
 
     }
 }
