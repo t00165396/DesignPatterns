@@ -30,18 +30,6 @@ public class snake  extends MoveObject {
 
 
 
-    public void drawSnake(Graphics g) {
-        for (int i = 0; i < snakeBody.size(); i++) {
-            g.setColor(Color.GREEN);
-            Point p = snakeBody.get(i);
-            g.fillOval(p.x * 15, p.y * 15, 15, 15);
-        }
-    }
-
-
-
-
-
     public void growSnake(int n) {
         while (n > 0) {
 
@@ -61,6 +49,16 @@ public class snake  extends MoveObject {
         }
         snakesHead.x += dx;
         snakesHead.y += 1;
+
+    }
+
+    @Override
+    public void drawObject(Graphics g) {
+        for (int i = 0; i < snakeBody.size(); i++) {
+            g.setColor(Color.GREEN);
+            Point p = snakeBody.get(i);
+            g.fillOval(p.x * 15, p.y * 15, 15, 15);
+        }
 
     }
 

@@ -3,7 +3,7 @@ package Observer;
 /**
  * Created by lirandakrasniqi on 20/11/2016.
  */
-public interface iGameRules {
+public interface GameRules {
     public int getScore();
     public void quit();
     public void restartGame();

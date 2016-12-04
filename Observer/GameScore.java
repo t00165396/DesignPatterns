@@ -17,9 +17,15 @@ public class GameScore implements Observer{
 
     }
 
+
     @Override
     public void update() {
         score++;
+
+    }
+
+    @Override
+    public void setObserver(Observable ob) {
 
     }
 }

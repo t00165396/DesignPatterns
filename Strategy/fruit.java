@@ -17,18 +17,17 @@ public class fruit extends MoveObject {
     }
 
 
-    public void drawApple(Graphics g) {
-        g.setColor(Color.RED);
-        g.fillOval(apple.x * 15, apple.y * 15, 15, 15);
-    }
-
 
     @Override
     public void move() {
         apple.x = position.nextInt((800 / 15) - 4) + 2;
         apple.y = position.nextInt((600 / 15) - 5) + 3;
+    }
 
-
+    @Override
+    public void drawObject(Graphics g) {
+        g.setColor(Color.RED);
+        g.fillOval(apple.x * 15, apple.y * 15, 15, 15);
     }
 }
 

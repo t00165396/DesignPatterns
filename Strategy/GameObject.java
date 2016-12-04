@@ -1,11 +1,12 @@
 package Strategy;
+import java.awt.*;
 
 
 public abstract class  GameObject {
 
     private ObjectPosition objectPosition;
 
-    //need to draw objects here
+
     //position of object
 
 
@@ -19,6 +20,10 @@ public abstract class  GameObject {
 
     public void move(){
 
+
+
+    }
+    public void drawObject(Graphics g){
 
 
     }

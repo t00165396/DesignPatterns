@@ -15,7 +15,7 @@ import javax.swing.*;
 /**
  * Created by lirandakrasniqi on 20/11/2016.
  */
-public class iGame implements iGameRules, KeyListener{
+public class iGame implements Observer.GameRules, KeyListener{
 
     private static  int windowWidth = 800;
     private static int windowHeight = 600;
