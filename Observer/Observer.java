@@ -5,8 +5,7 @@ package Observer;
  */
 public interface Observer {
 
+        public void update (int score, int fruitEaten);
 
-        public void update ();
-        public void setObserver(Observable ob);
 
 }

@@ -9,6 +9,5 @@ public interface GameRules {
     public void restartGame();
     public void collisionWithWall();
     public void collisionWithfruit();
-    public void addObserver(Observer obs);
-    public void notifyObservers();
+
 }
