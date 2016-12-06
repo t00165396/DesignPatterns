@@ -1,7 +1,7 @@
 package Observer;
 
-import Strategy.fruit;
-import Strategy.snake;
+import Strategy.Snake;
+import Strategy.Fruit;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,16 +15,16 @@ public class Game {
 
     private static  int windowWidth = 800;
     private static int windowHeight = 600;
-    snake snake =new snake();
-    fruit apple=new fruit();
+    Snake Snake =new Snake();
+    Fruit apple=new Fruit();
     JFrame f;
     int dx=0, dy=0;
 
     public Game() {
 
         f = new JFrame();
-        snake snake = new snake();
-        fruit apple = new fruit();
+        Snake Snake = new Snake();
+        Fruit apple = new Fruit();
         f.setSize(800, 600);
         f.setLocation(100, 100);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,12 +33,12 @@ public class Game {
         f.createBufferStrategy(2);
         //f.addKeyListener(this);
         drawBlackBackground();
-        snake.moveSnake(dx, dy);
+        Snake.moveSnake(dx, dy);
 
         while (true) {
             long time = System.currentTimeMillis();//belongs to the system class and is used to return time in milliseconds
-            snake.moveSnake(dx, dy); //this method calls all of the othe rmethods that are needed to start game
-            snake.growSnake(4);
+            Snake.moveSnake(dx, dy); //this method calls all of the othe rmethods that are needed to start game
+            Snake.growSnake(4);
             while (System.currentTimeMillis() - time < 90) {
                 //if time is less than 90 do nothing
 
@@ -50,14 +50,14 @@ public class Game {
 
             BufferStrategy buffer = f.getBufferStrategy();
             Graphics g = buffer.getDrawGraphics();
-            System.out.print(snake.getSnakesHead());
+            System.out.print(Snake.getSnakesHead());
 
             // creates the black background
             g.setColor(Color.BLACK);
             g.fillRect(0, 0, windowWidth, windowHeight);//gives the rect the same height and width as window
 
-            //snake and food are drawn on to the black rectangle
-            //snake.drawSnake(g);
+            //Snake and food are drawn on to the black rectangle
+            //Snake.drawSnake(g);
             //apple.drawApple(g);
 
 

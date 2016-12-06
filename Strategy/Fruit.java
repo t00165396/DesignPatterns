@@ -6,12 +6,12 @@ import java.util.Random;
 /**
  * Created by lirandakrasniqi on 06/11/2016.
  */
-public class fruit extends MoveObject {
+public class Fruit extends MoveObject {
 
     private Point apple;
     Random position = new Random();
 
-    public fruit() {
+    public Fruit() {
 
         apple = new Point(20, 10);
     }

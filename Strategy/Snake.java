@@ -6,14 +6,14 @@ import java.util.LinkedList;
 /**
  * Created by lirandakrasniqi on 20/11/2016.
  */
-public class snake  extends MoveObject {
+public class Snake extends MoveObject {
 
     private LinkedList<Point> snakeBody= new LinkedList<>();
     private Point snakesHead;
     private Point snakesTail;
     private int x;
 
-    public snake(){
+    public Snake(){
         super();
 
         snakeBody.addFirst(new Point(20,20));//  Returns the first element in this list.in this case it would be thehead of the snakeGame
@@ -22,6 +22,8 @@ public class snake  extends MoveObject {
     public Point getSnakesHead(){
         return  snakeBody.getFirst();
     }
+
+    public int getSnakeSize(){return snakeBody.size();}
 
     public Point getSnakesTail(){
         return  snakeBody.getLast();//

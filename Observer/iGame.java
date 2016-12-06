@@ -1,15 +1,6 @@
 package Observer;
 
-import Strategy.fruit;
-import Strategy.snake;
-
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.image.*;//bufferStrategy
-import javax.swing.*;
-
-
 
 
 /**

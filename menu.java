@@ -22,7 +22,7 @@ public class menu extends JFrame implements ActionListener,Serializable{
     public menu() {
         newSystem();
         //set the frame default properties
-        setTitle     ( "Snake Game" );
+        setTitle     ( "Snake GameLayout" );
         setSize      ( 400,200 );
         setLocation  ( 100,100 );
        
