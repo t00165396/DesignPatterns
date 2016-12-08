@@ -16,6 +16,9 @@ public class Game extends JFrame implements KeyListener {
     int dx,dy;
     Snake snake=new Snake();
     Fruit apple=new Fruit();
+    ObjectPosition objectPos;
+
+
 
 
 
@@ -34,10 +37,15 @@ public class Game extends JFrame implements KeyListener {
 
 
 
+
         while(true) {
             long time = System.currentTimeMillis();//belongs to the system class and is used to return time in milliseconds
             drawBlackBackground();//this method calls all of the othe rmethods that are needed to start game
+
             snake.moveSnake(dx,dy);
+
+
+           // snake.move();
 
 
             while(System.currentTimeMillis()-time < 90) {

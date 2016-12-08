@@ -6,10 +6,6 @@ public abstract class  GameObject {
 
     private ObjectPosition objectPosition;
 
-
-    //position of object
-
-
     public ObjectPosition getObjectPosition() {
         return objectPosition;
     }
@@ -19,14 +15,8 @@ public abstract class  GameObject {
     }
 
     public void move(){
-
-
-
     }
-    public void drawObject(Graphics g){
-
-
-    }
+    public void drawObject(Graphics g){}
 
 
 }
