@@ -11,5 +11,6 @@ public class InvokeCommands {
     }
     public void pressButton(){
         command.execute();
+
     }
 }

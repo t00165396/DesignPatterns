@@ -14,6 +14,11 @@ public class iGame implements Observer, DisplayElement{
     private Observer ob;
     private Observable subject;
 
+    public iGame()
+    {
+
+
+    }
 
 public iGame(Observable ob)
 {

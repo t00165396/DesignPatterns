@@ -19,40 +19,36 @@ public class GameCommands implements GameRules, Observable{
     private int fruitEatten;
     private static  int windowWidth ;
     private static int windowHeight ;
+    Point snakeHead;
+    private ArrayList<Observer> observers=new ArrayList<Observer>();
 
     public GameCommands(){
 
         createLayout();
     }
 
-    Point snakeHead;
-    private ArrayList<Observer> observers=new ArrayList<Observer>();;
-
     public void createLayout(){
-    snake=new Snake();
-
+        snake=new Snake();
         apple =new Fruit();
-
         windowWidth=800;
         windowHeight=600;
-
-
-
     }
 
 
     @Override
     public int increaseScore() {
-        score+=100;
+        score++;
         fruitEatten++;
-        System.out.print(score);
+        System.out.print(score+ fruitEatten);
         return score;
     }
 
     @Override
     public void gameOver() {
         JOptionPane.showMessageDialog(null,"Game over");
-        //restartGame();
+        restartGame();
+        System.exit(0);
+
 
     }
 
@@ -74,48 +70,27 @@ public class GameCommands implements GameRules, Observable{
 
     @Override
     public void snakeHitWall() {
-        snakeHead=snake.getSnakesHead();
+        gameOver();
 
-        if(snakeHead.x <= 0 ||
-                snakeHead.x >= windowWidth/15 ||
-                snakeHead.y <= 1.5 ||
-                snakeHead.y >= windowHeight/15.5) {
 
-            gameOver();
-
-        }
     }
 
     @Override
     public void snakeAteFruit() {
         snakeHead=snake.getSnakesHead();
 
-        //if snakeGame has eaten apple
-        if (snakeHead.equals(apple)) {
             apple.move();
             snake.growSnake(3);
             increaseScore();
             notifyObservers();
 
-        }
+
     }
 
     @Override
     public void snakeHitItself() {
-        if(snake.getSnakeSize()>=7)	{
 
-//            for(int i =1;i<snake.getSnakeSize();i++)
-//            {
-//                if(snakeHead.equals(snake.g(i)))
-//                {
-//                    gameOver();
-//
-//                }
-//            }
-
-        }
-
-
+        gameOver();
     }
 
 

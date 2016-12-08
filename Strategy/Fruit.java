@@ -16,6 +16,10 @@ public class Fruit extends MoveObject {
         apple = new Point(20, 10);
     }
 
+    public Point getApplePosition(){
+
+        return apple;
+    }
 
 
     @Override

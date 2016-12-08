@@ -21,10 +21,14 @@ public class Snake extends MoveObject {
     }
 
     public Point getSnakesHead(){
-        return  snakeBody.getFirst();
+
+        snakesHead=snakeBody.getFirst();
+        return  snakesHead;
     }
 
     public int getSnakeSize(){return snakeBody.size();}
+
+    public LinkedList<Point> getSnakeBody(int i){return snakeBody;}
 
     public Point getSnakesTail(){
         return  snakeBody.getLast();//
@@ -39,8 +43,6 @@ public class Snake extends MoveObject {
             snakeBody.add(new Point(snakeBody.getLast()));
             n--;
         }
-
-
 
     }
 

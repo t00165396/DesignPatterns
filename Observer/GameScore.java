@@ -38,8 +38,8 @@ public class GameScore implements Observable{
     public void increaseScore(int score){
 
         score++;
-        //fruitEaten++;
-        System.out.print(score);
+
+        System.out.print(" Score  "+ score +"\n");
         scoreChanged();
 
     }
