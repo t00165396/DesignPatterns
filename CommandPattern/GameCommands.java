@@ -51,8 +51,8 @@ public class GameCommands implements GameRules, Observable{
 
     @Override
     public void gameOver() {
-        JOptionPane.showMessageDialog(null,"GameCommands over");
-        restartGame();
+        JOptionPane.showMessageDialog(null,"Game over");
+        //restartGame();
 
     }
 
