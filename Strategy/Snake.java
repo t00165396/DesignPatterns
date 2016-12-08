@@ -8,7 +8,7 @@ import java.util.LinkedList;
  */
 public class Snake extends MoveObject {
 
-    private LinkedList<Point> snakeBody= new LinkedList<>();
+    private LinkedList<Point> snakeBody;
     private Point snakesHead;
     private Point snakesTail;
     private int x;
@@ -16,6 +16,7 @@ public class Snake extends MoveObject {
     public Snake(){
         super();
 
+        snakeBody=new LinkedList<Point>();
         snakeBody.addFirst(new Point(20,20));//  Returns the first element in this list.in this case it would be thehead of the snakeGame
     }
 
@@ -35,16 +36,19 @@ public class Snake extends MoveObject {
     public void growSnake(int n) {
         while (n > 0) {
 
-            snakeBody.add(new Point(snakesTail));
+            snakeBody.add(new Point(snakeBody.getLast()));
             n--;
         }
+
+
+
     }
 
 
     @Override
     public void move( ) {
 
-        int dx=0;
+        int dx=1;
         int dy=0;
         for (int i = snakeBody.size() - 1; i >= 1; i--) {
             snakeBody.get(i).setLocation(snakeBody.get(i - 1));
@@ -70,8 +74,10 @@ public class Snake extends MoveObject {
         for (int i = snakeBody.size() - 1; i >= 1; i--) {
             snakeBody.get(i).setLocation(snakeBody.get(i - 1));
         }
+        snakesHead=snakeBody.getFirst();
         snakesHead.x += dx;
         snakesHead.y += dy;
+
 
 
 

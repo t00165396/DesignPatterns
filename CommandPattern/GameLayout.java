@@ -21,6 +21,10 @@ public class GameLayout implements GameRules, Observable{
     private static  int windowWidth ;
     private static int windowHeight ;
 
+    public GameLayout(){
+
+        createLayout();
+    }
 
     Point snakeHead;
     private ArrayList<Observer> observers=new ArrayList<Observer>();;
@@ -29,6 +33,7 @@ public class GameLayout implements GameRules, Observable{
     snake=new Snake();
 
         apple =new Fruit();
+
         windowWidth=800;
         windowHeight=600;
 
@@ -113,6 +118,7 @@ public class GameLayout implements GameRules, Observable{
 
 
     }
+
 
     @Override
     public void addObserver(Observer o) {

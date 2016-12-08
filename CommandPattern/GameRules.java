@@ -14,4 +14,5 @@ public interface GameRules {
     public void snakeHitWall();
     public void snakeAteFruit();
     public void snakeHitItself();
+
 }

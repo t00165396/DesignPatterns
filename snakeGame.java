@@ -43,6 +43,7 @@ public class snakeGame extends JFrame  implements KeyListener  {
 		setVisible(true);
 		this.createBufferStrategy(2);
 		this.addKeyListener(this);
+
 		snake = new LinkedList<Point>();//creates the linkedlist object
 		snake.addFirst(new Point(20,20));//  Returns the first element in this list.in this case it would be thehead of the snakeGame
 		growSnake(5);	
