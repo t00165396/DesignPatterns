@@ -35,7 +35,7 @@ public class snakeGame extends JFrame  implements KeyListener  {
     */	
 	  public snakeGame() {
 		
-		super("Snake GameLayout");
+		super("Snake GameCommands");
 		setSize(800,600);
 		setLocation(100,100);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -123,7 +123,7 @@ public class snakeGame extends JFrame  implements KeyListener  {
 	 **/
 	public void gameOver()
 	{
-		JOptionPane.showMessageDialog(null,"GameLayout over");
+		JOptionPane.showMessageDialog(null,"GameCommands over");
 				 myMenu=new menu();
 				myMenu.addScore();
 				try{
@@ -137,7 +137,7 @@ public class snakeGame extends JFrame  implements KeyListener  {
 				
 				myMenu.display();
 				
-			int newGame = JOptionPane.showConfirmDialog(null,"Would you like to play another game","Another GameLayout?",JOptionPane.YES_NO_OPTION);
+			int newGame = JOptionPane.showConfirmDialog(null,"Would you like to play another game","Another GameCommands?",JOptionPane.YES_NO_OPTION);
 				
 				if(newGame==0)//If yes selected
 				{	

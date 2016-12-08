@@ -6,14 +6,13 @@ import Strategy.Fruit;
 import Strategy.Snake;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferStrategy;
 import java.util.ArrayList;
 
 
 /**
  * Created by lirandakrasniqi on 05/12/2016.
  */
-public class GameLayout implements GameRules, Observable{
+public class GameCommands implements GameRules, Observable{
     private Snake snake;
     private Fruit apple;
     private int score;
@@ -21,7 +20,7 @@ public class GameLayout implements GameRules, Observable{
     private static  int windowWidth ;
     private static int windowHeight ;
 
-    public GameLayout(){
+    public GameCommands(){
 
         createLayout();
     }
@@ -52,18 +51,18 @@ public class GameLayout implements GameRules, Observable{
 
     @Override
     public void gameOver() {
-        JOptionPane.showMessageDialog(null,"GameLayout over");
+        JOptionPane.showMessageDialog(null,"GameCommands over");
         restartGame();
 
     }
 
     @Override
     public void restartGame() {
-        int newGame = JOptionPane.showConfirmDialog(null,"Would you like to play another game","Another GameLayout?",JOptionPane.YES_NO_OPTION);
+        int newGame = JOptionPane.showConfirmDialog(null,"Would you like to play another game","Another GameCommands?",JOptionPane.YES_NO_OPTION);
 
         if(newGame==0)//If yes selected
         {
-            GameLayout s2=new GameLayout();
+            GameCommands s2=new GameCommands();
         }
         if(newGame==1)//If no selected
         {

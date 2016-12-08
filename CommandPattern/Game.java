@@ -5,14 +5,14 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
-import java.util.LinkedList;
+
 import Strategy.*;
 
 /**
  * Created by lirandakrasniqi on 05/12/2016.
  */
 public class Game extends JFrame implements KeyListener {
-    private GameLayout g;
+    private GameCommands g;
     int dx,dy;
     Snake snake=new Snake();
     Fruit apple=new Fruit();
@@ -21,7 +21,7 @@ public class Game extends JFrame implements KeyListener {
 
     public Game(){
         super("Snake Game");
-       // g=new GameLayout();
+       // g=new GameCommands();
         setSize(800,600);
         setLocation(100,100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,6 +38,7 @@ public class Game extends JFrame implements KeyListener {
             long time = System.currentTimeMillis();//belongs to the system class and is used to return time in milliseconds
             drawBlackBackground();//this method calls all of the othe rmethods that are needed to start game
             snake.moveSnake(dx,dy);
+
 
             while(System.currentTimeMillis()-time < 90) {
                 //if time is less than 90 do nothing
