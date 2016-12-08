@@ -69,7 +69,7 @@ public class Snake extends MoveObject {
 
     }
 
-    public void moveSnake( int dx, int dy) {
+    public void changeDirection(int dx, int dy) {
 
 
         for (int i = snakeBody.size() - 1; i >= 1; i--) {

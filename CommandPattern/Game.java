@@ -43,7 +43,7 @@ public class Game extends JFrame implements KeyListener {
             GameScore gameScore =new GameScore();
 
 
-            snake.moveSnake(dx,dy);
+            snake.changeDirection(dx,dy);
 
 
         //when snake eats food c
